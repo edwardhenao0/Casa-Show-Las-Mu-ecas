@@ -127,6 +127,7 @@ div.social a i {
     width: 100%;
     justify-content: space-between;
     background: none;
+    z-index: 50000;
   }
   ul {
     display: flex;
@@ -352,6 +353,66 @@ div.botones-banner a {
     display: block;
   }
 }
+
+/*----------------------PAGINA NOSOTROS-----------------------------*/
+.nosotros-container {
+  width: 100%;
+  padding: 5rem 2rem;
+  box-shadow: 0px 7px 8px -10px rgba(0, 0, 0, 0.8);
+}
+.nosotros-container:nth-child(2),
+.nosotros-container:nth-child(3) {
+  padding: 0 2rem 5rem;
+}
+.nosotros-container h1,
+h2 {
+  width: 100%;
+  margin: 2rem auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+.nosotros-container article {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1 fr;
+  gap: 2rem;
+}
+section .imagen img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+  box-shadow: 0px 3px 10px 4px var(--negro);
+}
+.nosotros-container .texto {
+  text-align: justify;
+}
+
+/*Resposive para escritorio*/
+@media (min-width: 930px) {
+  .nosotros-container article {
+    /*grid-template-columns: 1fr 1fr; forma numero 1*/
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center; /*Alinear los hijos horizantal*/
+    align-items: center; /*Alinear los hijos en vertical*/
+    padding: 0 4rem;
+  }
+  .nosotros-container h1,
+  h2 {
+    margin: 4rem auto;
+  }
+  section .imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  section .imagen img {
+    max-width: 40rem;
+  }
+  .nosotros-container .texto {
+    line-height: 2.5rem;
+  }
+}
+
 /**Footer para dispositivos moviles**/
 footer {
   background-color: var(--primario);
@@ -402,4 +463,10 @@ ul.contacto li a {
   footer ul.contacto li a {
     display: inline;
   }
+}
+
+/*       borrar despues     */
+
+.productos-container {
+  display: none;
 }

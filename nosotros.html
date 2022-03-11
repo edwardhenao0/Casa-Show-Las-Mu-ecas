@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <!-- Scrip para la funcion del slider-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- -->
+    <title>Navbar</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-toggle">
+        <a class="logo" href="/">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/2/2c/OneWeb_Logo.png"
+            alt="Logo"
+          />
+        </a>
+        <button id="btnMenu"><i class="uil uil-bars"> </i></button>
+      </div>
+
+      <nav id="menu">
+        <ul>
+          <li><a href="/nosotros.html">Acerca de</a></li>
+          <li><a href="/catalogo.html">Catalogo</a></li>
+          <li>
+            <a href="/trabaja-con-nosotros.html">Trabaja con nosotros</a>
+          </li>
+          <li>
+            <a
+              href="https://api.whatsapp.com/send?phone=573147015610&text=Hola%20quiero%20conocer%20tu%20negocio"
+              target="_blank"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+
+        <div class="social">
+          <a
+            href="https://www.facebook.com/Casa-show-las-mu%C3%B1ecas-102582155687445"
+            target="_blank"
+            ><i class="uil uil-facebook-f"></i
+          ></a>
+          <a
+            href="https://api.whatsapp.com/send?phone=573147015610&text=Hola%20quiero%20conocer%20tu%20negocio"
+            target="_blank"
+            ><i class="uil uil-whatsapp"></i
+          ></a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="nosotros-container">
+        <h1>quienes somos</h1>
+        <article class="nosotros-contenido">
+          <div class="imagen">
+            <img
+              src="assets/imagenes/apoyo/apoyo_1.jpeg"
+              alt="imagen-negocio"
+            />
+          </div>
+          <div class="texto">
+            <p>
+              Casa show las muñecas en mayo del 2022 cumple 23 años de fundada,
+              es un negocio que desde sus inicios ha aportado grandes momentos
+              de entretenimiento y diversión adulta bajo la administración de su
+              propietaria. El excelente servicio y el mejor ambiente laboral
+              para nuestros colaboradores nos ha permitido mantenernos activos a
+              lo largo de todos estos años. Aqui encontraras un lugar de
+              esparcimiento seguro y libre, pero lo mejor de todo es que siempre
+              podras contar con el acompañamiento más de 35 lindas y sexys
+              mujeres todas dispuestas acomplacerte y hacerte vivir los mejores
+              momentos.
+            </p>
+          </div>
+        </article>
+      </section>
+      <section class="nosotros-container">
+        <h2>Lo que que hacemos</h2>
+        <article class="que-hacemos-contenido">
+          <div class="texto">
+            <p>
+              En casa show las muñecas encontraras mujeres muy sensuales para
+              complacer todas tus fantasias, el entretenimiento para adulto en
+              casa show las muñecas se vive a otro nivel.
+            </p>
+          </div>
+          <div class="imagen">
+            <img
+              src="assets/imagenes/apoyo/apoyo_2.jpeg"
+              alt="lo que hacemos"
+            />
+          </div>
+        </article>
+      </section>
+      <section class="nosotros-container">
+        <h2>nuestros productos</h2>
+        <article class="productos-contenido">
+          <div class="imagen">
+            <img
+              src="assets/imagenes/apoyo/apoyo_3.jpeg"
+              alt="nuestros productos"
+            />
+          </div>
+          <div class="texto">
+            <p>
+              Tus momentos de diversión los puedes acompañar de un suave trago
+              de Aguardiente Fiesta sin azucar, o si la diversion requiere otro
+              nivel Ron Viejo de caldas sera la mejor opcion, tambien
+              encontraras gran variedad de Wiskys, cervezas nacionales y muchas
+              bebidas de refrescantes.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+    <!--Footer-->
+    <footer>
+      <div class="titulo-footer">
+        <h1>casa show las muñecas <span>Entretenimiento para Adultos</span></h1>
+      </div>
+      <ul class="contacto">
+        <li>
+          Encuentranos en Facebook como:
+          <a
+            href="https://www.facebook.com/Casa-show-las-mu%C3%B1ecas-102582155687445"
+            target="_blank"
+            >Casa Show las Muñecas</a
+          >
+        </li>
+        <li>
+          Contactanos por whatsapp al:
+          <a
+            href="https://api.whatsapp.com/send?phone=573147015610&text=Hola%20quiero%20conocer%20tu%20negocio"
+            target="_blank"
+            >+57 3147015610</a
+          >
+        </li>
+        <li>Ubicados en Cartago - Valle salida a Pereira</li>
+      </ul>
+    </footer>
+    <script src="assets/js/script.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

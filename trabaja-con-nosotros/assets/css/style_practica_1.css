@@ -1,0 +1,140 @@
+/*se importa la fuente que queremos que tenga la pagina*/
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;700&display=swap");
+
+/*reseteamos todos los stilos*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Agregamos al body la regla de la fuente*/
+body {
+  font-family: "Urbanist", sans-serif;
+}
+
+/*Todos los elementos de la clase container*/
+.container {
+  width: 90%; /*Que tengan un ancho del 90%*/
+  max-width: 1200px; /*Un ancho maxiumo de 1200 pixeles*/
+  margin: 0 auto; /*centrar el contenedor*/
+  overflow: hidden; /*que todo lo que salga del contenedor se esconda*/
+}
+.hero {
+  background-image: linear-gradient(
+    to top,
+    #051367 100%,
+    #051367 100%,
+    #051367 100%
+  );
+  color: rgb(253, 251, 251); /*totos los elemento dentro de hero sean blancos*/
+  display: grid;
+  grid-template-rows: max-content 1fr; /*la primera abarca el maximo del contenido y el segundo el espacio sobrante*/
+  grid-template-areas: "nav" "content"; /*2 areas*/
+  min-height: 100vh;
+}
+.nav {
+  grid-area: nav;
+  display: grid; /**se crea una grilla para nav*/
+  justify-content: space-between; /*ubica a las esquinas las columnas d ela grilla*/
+  grid-auto-flow: column; /*por el columnas el flujo del grid*/
+  gap: 1em; /*genero espacio entre los items del nav*/
+  align-items: center; /**alineo los itmes al centro*/
+  height: 9rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column; /**para poder uno al lado del otro horizontal ----*/
+  gap: 1em; /*espacio entre los elementos*/
+}
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+}
+.nva-logo {
+  font-size: 1.8rem;
+  font-weight: 300px;
+  color: red;
+}
+.nav-menu {
+  display: none; /**le quieta el grid a nav en el menu*/
+}
+
+.nav-icon {
+  width: 3rem;
+}
+
+/*Hero main*/
+.hero-main {
+  grid-area: content;
+  display: grid; /*activo la grilla de hero-main*/
+  gap: 2em;
+  /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  Aqui creo columnas automaticamente como si fueras la pagina Responsive*/
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 180px;
+  align-items: center;
+}
+
+.hero-waves {
+  grid-area: content; /*dejo fijo el area del waves*/
+  align-self: end;
+}
+.hero-title {
+  font-size: 2.6rem; /*tamaño de fuente*/
+  letter-spacing: 2px; /*Espaciado entre las letras*/
+}
+.hero-subtitle {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+/*cta = al llamado a la accion, es el boton de "Join us"*/
+.hero-cta {
+  text-decoration: none; /*sin decoracion el texto*/
+  color: rgb(238, 9, 9); /*color de la fuente*/
+  padding: 15px 60px; /*espacio desde las letras de 15px arriba y abajo, y 60px a los lados*/
+  border: 1px solid; /*dibuja el contorno del recuadro del boton*/
+  border-radius: 6px; /* suaviza las esquinas del recuadro*/
+  display: inline-block; /*no se bien*/
+  font-weight: 500;
+  transition: background-color 0.3s; /*tardara 0.3 segundos para hacer la transicion cuando pase el mouse*/
+}
+/*para cuando pase el mouse por encima del boton cambie el fondo del boton*/
+.hero-cta:hover {
+  background-color: #fff; /*Fondo de color blanco cuando pase el mouse*/
+  color: #1e3c72; /**/
+}
+.hero-img {
+  width: 100%;
+}
+
+/*Codigo para hacer responsive a partir de 800px*/
+@media (max-width: 800px) {
+  .nav-list {
+    display: none; /*sin display*/
+  }
+
+  .nav-menu {
+    display: block;
+  }
+
+  .hero-main {
+    grid-template-columns: 1fr; /*Se generara solo una fraccion al reducir la pantalla*/
+    grid-template-rows: max-content; /*la grilla de filas maximas posibles*/
+    text-align: center; /*centro todo el texto*/
+  }
+
+  .nav-picture {
+    grid-row: 1/2;
+  }
+
+  .nav-img {
+    max-width: 500px; /*maximo ancho*/
+    display: block; /*el display queda en bloque*/
+    margin: 0 auto; /*centra la imagen horizontalmente en la pagina*/
+  }
+}
