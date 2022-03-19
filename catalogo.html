@@ -12,6 +12,11 @@
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
+    <!-- Scrip para la funcion del slider-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header>
@@ -55,21 +60,46 @@
         </div>
       </nav>
     </header>
-    <section class="hero">
-      <article class="hero-text">
-        <h1 class="hero-title">
-          Somos la mejor opción de entretenimiento para adultos, ven y trabaja
-          con nosotros. No te arrepentirás..
-        </h1>
-        <p class="hero-subtitle"></p>
-        <a
-          href="https://api.whatsapp.com/send?phone=573147015610&text=Hola%20quiero%20conocer%20tu%20negocio"
-          target="_blank"
-          class="hero-cta"
-          >Escribenos <i class="uil uil-whatsapp"></i
-        ></a>
-      </article>
+
+    <section>
+      <h2>nuestro catálogo</h2>
+      <div class="catalogo-container"></div>
     </section>
+    <section class="info-container">
+      <p>
+        Las mejores y más sensuales damas de compañía todas dispuestas a
+        complacerte, en cómodas habitaciones con baños privado. Atención al
+        cliente VIP y los mejores precios del norte del Valle. Casa Show Las
+        Muñecas te espera en el rount point de la salida a Pereira
+      </p>
+      <a
+        href="https://api.whatsapp.com/send?phone=573147015610&text=Hola%20me%20interesa%20una%20chica"
+        target="_blank"
+        >WhatsApp</a
+      >
+    </section>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/slider.js" type="module"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 5500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
   <!--Footer-->
   <footer>

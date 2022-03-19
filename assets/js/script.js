@@ -9,8 +9,6 @@ for (let i = 0; i < navLength; i++) {
   }
 }
 
-console.log(activePage);
-
 btnMenu.addEventListener("click", function () {
   menu.classList.toggle("show");
   console.log(menu);
